@@ -1,60 +1,34 @@
-import { Button } from "./components/button";
-import { Logo } from "./components/logo";
-import { MainText } from "./components/maintext";
-import { Navigation } from "./components/navigation";
-import { NavigationItem } from "./components/navigation-item";
 import BackgroundImage from "../public/brooke.png";
+import { InvitationBox } from "./components/invitation-box";
+import { Navigation } from "./components/navigation";
 
 export default function Home() {
   return (
-    <main
-      style={{
-        height: "100vh",
-        backgroundImage: `url(${BackgroundImage.src})`,
-        backgroundSize: "cover",
-      }}
-    >
-      <Navigation />
-      <div style={{ paddingLeft: "139px" }}>
-        <Logo />
-      </div>
+    <main>
+
       <div
-        id="navigationitems1"
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingTop: "4px",
-          paddingLeft: "124px",
-          paddingRight: "140px",
+          height: "100vh",
+          backgroundImage: `url(${BackgroundImage.src})`,
+          backgroundSize: "cover",
         }}
       >
-        <NavigationItem href="/products">Products</NavigationItem>
-        <NavigationItem href="/products">Services</NavigationItem>
-        <NavigationItem href="/products">Contact</NavigationItem>
-        <NavigationItem href="/products">Log In</NavigationItem>
-        <div id="navigationitems2" style={{ display: "flex" }}>
-          <Button type={"getaccess"} />
+        <div >
+          <Navigation />
         </div>
-        <div></div>
+        <InvitationBox />
       </div>
-      <MainText></MainText>
       <div
-        id="EmailInputandBlueButton"
         style={{
-          display: "flex",
-          paddingTop: "70px",
-          paddingLeft: "139px",
+          height: "100vh",
+          backgroundColor: "red",
+          backgroundSize: "cover",
         }}
       >
-        <Button type={"emailinput"} />
-        <div
-          style={{
-            paddingLeft: "13,8",
-          }}
-        >
-          <Button />
+        <div >
+          <Navigation />
         </div>
+        <InvitationBox />
       </div>
     </main>
   );

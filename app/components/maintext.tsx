@@ -1,6 +1,10 @@
 export const MainText = () => {
   return (
-    <div style={{ paddingLeft: "139px" }}>
+    <div style={{
+      paddingLeft: "139px",
+      width:"514px",
+      height:"326px",
+    }}>
       <h1
         style={{
           color: "white",
