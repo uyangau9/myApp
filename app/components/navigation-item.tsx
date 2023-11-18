@@ -1,20 +1,22 @@
 import { ReactNode } from "react";
+
 export const NavigationItem = ({
-    children,
-    href,
+  children,
+  href,
 }: {
-    children: ReactNode;
-    href?: string;
+  children: ReactNode;
+  href?: string;
 }) => {
-    return (
-        <a
-            href={href || "/"}
-            style={{
-                color: "white",
-                textDecorationColor: "white",
-                lineHeight:"28.11px",            }}
-        >
-            {children}
-        </a>
-    );
+  return (
+    <a
+      href={href || "/"}
+      style={{
+        color: "white",
+        textDecorationColor: "white",
+        lineHeight: "28.11px",
+      }}
+    >
+      {children}
+    </a>
+  );
 };
