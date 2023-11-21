@@ -14,6 +14,8 @@ export const NavigationItem = ({
         color: "white",
         textDecorationColor: "white",
         lineHeight: "28.11px",
+        alignItems:"center",
+
       }}
     >
       {children}

@@ -1,42 +1,39 @@
+
+
 export const Button = ({ text, type }) => {
   if (type == "getaccess") {
     return (
       <button
         style={{
-          border: "solid",
+          border: "1px solid white",
+          borderRadius: "4px",
           color: "white",
+          width: "128px",
+          height: "56px",
+          fontSize: "14px",
+          lineHeight: "24px",
+          alignItems: "center",
+
+
         }}
       >
         {text || "Get access"}
       </button>
     );
   }
-  if (type == "emailinput") {
-    return (
-      <button
-        style={{
-          border: "solid 1px",
-          width: "316.92px",
-          height: "56px",
-        }}
-      >
-        email
-      </button>
-    );
-  }
+
+
   return (
     <button
       style={{
         border: "solid",
-        width: "163.41px",
-        height: "56px",
         borderRadius: "4px",
         backgroundColor: "#0BBEF2",
         color: "white",
-        fontWeight: "700",
         fontSize: "16px",
         lineHeight: "24px",
-        paddingLeft: "13.8px",
+        marginLeft: "13.8px",
+        padding: "16px 19px",
       }}
     >
       {text || "Get early access"}

@@ -1,9 +1,10 @@
 export const MainText = () => {
   return (
     <div style={{
-      paddingLeft: "139px",
-      width:"514px",
-      height:"326px",
+      paddingTop: "196px",
+      width: "514px",
+      height: "326px",
+
     }}>
       <h1
         style={{
@@ -13,6 +14,7 @@ export const MainText = () => {
           fontWeight: "400",
           fontSize: "48px",
           lineHeight: "56,3px",
+          
         }}
       >
         Instant collaborations for remote teams

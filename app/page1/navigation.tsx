@@ -7,13 +7,14 @@ export const Navigation = () => {
     <div style={{
       display: "flex",
       justifyContent: "space-between",
-      alignItems: "center",
-      paddingTop: "4px",
+      paddingTop: "24px",
+      paddingLeft: "139px"
     }}>
       <Logo />
       <div style={{
         display: "flex",
-      gap:"20px",}}>
+        gap: "20px",
+      }}>
         <NavigationItem>Products</NavigationItem>
         <NavigationItem>Services</NavigationItem>
         <NavigationItem>Contact</NavigationItem>
