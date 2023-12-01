@@ -13,6 +13,7 @@ export const Button = ({ text, type }) => {
           fontSize: "14px",
           lineHeight: "24px",
           alignItems: "center",
+          backgroundColor: "transparent"
 
 
         }}

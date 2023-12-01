@@ -1,14 +1,13 @@
 import BackgroundImage from "../public/brooke.png";
 import { InvitationBox } from "./page1/invitation-box";
 import { Navigation } from "./page1/navigation";
-import { Text1 } from "./page2/text1";
-import { Text2 } from "./page2/text2";
-import { Meetings } from "./page2/pictures";
 import { FirstSection } from "./page2/first-section";
 import { SecondSection } from "./page2/second-section";
 import { ThirdSection } from "./page2/third-section";
 import { Text4 } from "./page2/text4";
-import { Star } from "./page1/star";
+import { ReviewBox, ReviewBox2, ReviewBox3, ReviewBox4 } from "./page2/review-box";
+import { Arrow } from "./page2/arrow";
+import { Footer } from "./page2/footer";
 
 
 export default function Home() {
@@ -37,11 +36,19 @@ export default function Home() {
         }}
       >
         <div>
-          <FirstSection/>
-          <SecondSection/>
-          <ThirdSection/>
-          <Text4/>
-          <Star/>
+          <FirstSection />
+          <SecondSection />
+          <ThirdSection />
+          <Text4 />
+          <div style={{ display: "flex" }}>
+            <ReviewBox />
+            <ReviewBox2 />
+            <ReviewBox3 />
+            <ReviewBox4 />
+          </div>
+          <Arrow/>
+<Footer/>
+          
 
 
 
