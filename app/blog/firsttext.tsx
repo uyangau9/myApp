@@ -3,8 +3,8 @@ export const FirstText = () => {
     return (
         <div style={{
             paddingLeft: "140px",
-            paddingTop:"96px",
-            fontFamily:"'Cabin', sans-serif;"
+            paddingTop: "96px",
+            fontFamily: "'Cabin', sans-serif;"
         }}>
             <h1 style={{
                 height: "60px",
@@ -21,7 +21,7 @@ export const FirstText = () => {
                 lineHeight: "29.37px",
                 color: "#6D7D8B",
             }}> Our latest updates and blogs about managing your team</p>
-           
+
         </div>
 
 

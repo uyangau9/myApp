@@ -1,8 +1,10 @@
-export const Box = () => {
+export const Box = ({ title, description, image, avatar, name, date }) => {
     return (<div style={{
+        
         paddingLeft: "141px",
         paddingTop: "69px",
         fontFamily: "'Cabin', sans-serif"
+        
     }}>
 
         <div id="box" style={{
@@ -12,7 +14,7 @@ export const Box = () => {
             borderRadius: "30px",
             overflow: "hidden"
         }}>
-            <img style={{ width: "370px", height: "147px" }} src="/pictureblog.png"></img>
+            <img style={{ width: "370px", height: "147px" }} src={image}></img>
             <div style={{ paddingLeft: "34px" }}>
 
                 <p style={{
@@ -21,8 +23,8 @@ export const Box = () => {
                     paddingTop: "22px",
                     fontSize: "24px",
                     lineHeight: "29.16px",
-                    fontFamily:"'Cabin', sans-serif"
-                }}>The Emotional Toll of Being in UX</p>
+                    fontFamily: "'Cabin', sans-serif"
+                }}>{title}</p>
 
 
                 <p style={{
@@ -31,14 +33,14 @@ export const Box = () => {
                     paddingTop: "25px",
                     fontSize: "14px",
                     lineHeight: "21.08px",
-                    fontFamily:"'Cabin', sans-serif;"
-                }} >There are times when our work impacts us deeply — sometimes in ways we neither acknowledge nor understand</p>
+                    fontFamily: "'Cabin', sans-serif;"
+                }} > {description}</p>
 
                 <div style={{
                     paddingTop: "57px",
                     display: "flex"
                 }}>
-                    <img src="/avatar.png"></img>
+                    <img src="reviewImage"></img>
                     <div style={{
                         fontWeight: "600px",
                         fontSize: "12px",
@@ -49,9 +51,9 @@ export const Box = () => {
                         paddingLeft: "20.15px",
                         color: "#6D7D8B"
                     }}>
-                        <p>Wade Warren</p>
+                        <p>{name }</p>
                         <p>|</p>
-                        <p>2nd January,2022</p>
+                        <p>{ }</p>
                     </div>
                 </div>
 
@@ -61,3 +63,4 @@ export const Box = () => {
     </div>
     )
 }
+
