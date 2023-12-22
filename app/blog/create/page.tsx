@@ -1,30 +1,53 @@
 "use client";
-import { Button } from "@mui/material";
+import { app } from "@/app/firebase";
 import TextField from "@mui/material/TextField";
-import { initializeApp } from "firebase/app";
-import firebase from "firebase/compat/app";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { getDownloadURL, getStorage } from "firebase/storage";
 import { useState } from "react";
+import { ref, uploadBytes } from "firebase/storage";
+
+const storage = getStorage(app);
 
 export default function Home() {
     const [name, setName] = useState("");
     const [hometown, setHometown] = useState("");
     const [hobby, setHobby] = useState("");
     const [favoritecolor, setFavoritecolor] = useState("");
+    const [image, setImage] = useState(null);
+    const [avatar, setAvatar] = useState(null);
+    const saveImage = async () => {
+        const imageRef = ref(storage, image?.name);
+        await uploadBytes(imageRef, image)
+        const imageurl = await getDownloadURL(imageRef)
+
+        const avatarRef = ref(storage, avatar?.name);
+        await uploadBytes(avatarRef, avatar)
+        const avatarurl = await getDownloadURL(avatarRef)
+        console.log(avatarurl)
+        console.log(imageurl)
+    };
+
+
+
+
     return (
         <main>
-            <h1>hello</h1>
             <div style={{
-                gap: "10px"
+                display: "flex",
+                flexDirection: "column"
             }}>
-                {JSON.stringify({
-                    name: name,
-                    hometown: hometown,
-                    hobby: hobby,
-                    favoritecolor: favoritecolor,
 
-                })}
-                
+                <h1>hello</h1>
+                <div style={{
+                    gap: "10px"
+                }}>
+                    {JSON.stringify({
+                        name: name,
+                        hometown: hometown,
+                        hobby: hobby,
+                        favoritecolor: favoritecolor,
+
+                    })}
+
                 </div>
                 <TextField
                     label="Name"
@@ -44,17 +67,29 @@ export default function Home() {
                     label="hobby"
                     variant="outlined"
                     onChange={(e) => {
-                        setName(e.target.value);
+                        setHobby(e.target.value);
                     }}
                 />
                 <TextField
                     label="favoritecolor"
                     variant="outlined"
                     onChange={(e) => {
-                        setName(e.target.value);
+                        setFavoritecolor(e.target.value);
                     }}
+
                 />
-                
+                <input type="file"
+                    onChange={(e) => {
+                        setImage(e.target.files[0]);
+                    }}></input>
+                <input type="file"
+                    onChange={(e) => {
+                        setAvatar(e.target.files[0]);
+                    }}></input>
+                <button
+                    onClick={saveImage}
+                >save</button>
+            </div>
         </main>
     )
 }
