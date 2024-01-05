@@ -9,12 +9,7 @@ export const InvitationBox = () => {
         }}>
             <MainText></MainText>
             <EmailInput email="" />
-            <Button type={"bluebutton"} />
+            <Button />
         </div>
-
-
-
-
-
     )
 }

@@ -1,6 +1,6 @@
 
 
-export const Button = ({ text, type }) => {
+export const Button = ({ text, type }: { text?: string; type?: "getaccess" }) => {
   if (type == "getaccess") {
     return (
       <button

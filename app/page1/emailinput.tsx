@@ -1,5 +1,5 @@
 
-export const EmailInput = ({ email }) => {
+export const EmailInput = ({ email }:{email:string}) => {
     return (
 
         <input style={{

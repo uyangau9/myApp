@@ -1,10 +1,18 @@
-export const Box = ({ title, description, image, avatar, name, date }) => {
+export const Box = ({ title, description, image, avatar, name, date }:
+    {
+        title: string;
+        description: string;
+        image: string;
+        avatar: string;
+        name: string;
+        date: string
+    }) => {
     return (<div style={{
-        
+
         paddingLeft: "141px",
         paddingTop: "69px",
         fontFamily: "'Cabin', sans-serif"
-        
+
     }}>
 
         <div id="box" style={{
@@ -51,7 +59,7 @@ export const Box = ({ title, description, image, avatar, name, date }) => {
                         paddingLeft: "20.15px",
                         color: "#6D7D8B"
                     }}>
-                        <p>{name }</p>
+                        <p>{name}</p>
                         <p>|</p>
                         <p>{ }</p>
                     </div>
