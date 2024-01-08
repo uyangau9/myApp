@@ -8,6 +8,7 @@ import backgroundImage from "../create/back.jpg";
 import styled from "@mui/material/styles";
 import button from "@mui/material/Button";
 import * as React from "react";
+import { Logo } from "@/app/page1/logo";
 
 
 const storage = getStorage(app);
@@ -46,7 +47,11 @@ export default function Home() {
         backgroundImage: `url(${backgroundImage.src})`,
         backgroundSize: "cover"
       }}>
-
+        <div style={{ paddingTop: "24px", paddingLeft: "100px" }} >
+          <a href="/">
+            <Logo />
+          </a>
+        </div>
         <div
           style={{
             display: "flex",
@@ -54,7 +59,6 @@ export default function Home() {
             paddingLeft: "100px"
           }}
         >
-
 
           <TextField
             style={{

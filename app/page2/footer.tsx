@@ -1,7 +1,7 @@
 export const Footer = () => {
     return (
         <div style={{
-            width: "1443px",
+            width: "100%",
             height: "336px",
             backgroundColor: "#252B3B",
             display: "flex"

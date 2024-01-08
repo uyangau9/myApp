@@ -6,6 +6,7 @@ import { FirstText } from "./firsttext";
 import { collection, getFirestore } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { app } from "../firebase";
+import { BlogNavigation } from "../page1/blog-navigation";
 
 export default function Home() {
   const [value, loading, error] = useCollection(
@@ -23,7 +24,7 @@ export default function Home() {
           backgroundColor: "#F5F7FA",
         }}
       >
-        <Navigation />
+        <BlogNavigation/>
         <FirstText />
         {value && (
           <span style={{ display: "flex", flexWrap: "wrap" }}>

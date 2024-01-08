@@ -40,7 +40,8 @@ export default function Home() {
           <SecondSection />
           <ThirdSection />
           <Text4 />
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex" ,
+        overflow:"hidden"}}>
             <ReviewBox />
             <ReviewBox2 />
             <ReviewBox3 />

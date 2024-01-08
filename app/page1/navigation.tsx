@@ -18,8 +18,8 @@ export const Navigation = () => {
         gap: "20px",
         alignItems: "center"
       }}>
-        <NavigationItem>Products</NavigationItem>
-        <NavigationItem>Services</NavigationItem>
+        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/blog/create">Create</NavigationItem>
         <NavigationItem>Contact</NavigationItem>
         <NavigationItem>Log In</NavigationItem>
         <div>
